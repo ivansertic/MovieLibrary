@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eae241c5-4178-4941-b701-3a1a2b6cc9ec" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Yr1U4kfeVU4diMrH8ztHNxU0Qy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eae241c5-4178-4941-b701-3a1a2b6cc9ec" name="Default Changelist" comment="" />
+      <created>1583685911468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583685911468</updated>
+      <workItem from="1583685914249" duration="6187000" />
+      <workItem from="1583776933269" duration="3739000" />
+      <workItem from="1583792878612" duration="742000" />
+      <workItem from="1583943394027" duration="266000" />
+      <workItem from="1583945830317" duration="6437000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="922" y="166" key="SettingsEditor" timestamp="1583943468707">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1583943468707" />
+    <state x="1054" y="116" width="772" height="831" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583793017841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1054" y="116" width="772" height="831" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583793017841" />
+  </component>
+</project>
