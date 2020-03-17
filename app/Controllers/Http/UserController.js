@@ -5,7 +5,7 @@ class UserController {
 
   async show({request,response}){
 
-    const user = request.post().user;
+    const user = request.user;
     response.json({
       message: "Here is your data",
       "email": user.email,
@@ -13,17 +13,17 @@ class UserController {
     })
   }
 
-  async update({request, response}){
+  async update({request,response}){
 
-    const {email,password, user} = await request.post();
+    const {email,password} = await request.post();
 
 
-    user.email = email;
-    user.password = password;
+    request.user.email = email;
+    request.user.password = password;
 
-    await user.save();
+    await request.user.save();
 
-    return response.json.status(200)({
+    return response.status(200).json({
       message: 'Successfully update your info'
     });
 
@@ -31,11 +31,11 @@ class UserController {
   }
 
   async delete({response, request}){
-    const user = request.post().user;
+    const user = request.user;
 
     await user.delete();
 
-    return response.json.status(200)({
+    return response.status(200).json({
       message: 'Sorry to se you go'
     });
   }

@@ -9,8 +9,9 @@ class FindUser {
    * @param {Request} ctx.request
    * @param {Function} next
    */
-  async handle ({ request,response, auth }, next) {
+  async handle (ctx, next) {
     // call next to advance the request
+    const {request, response,auth} = ctx;
     if(!await auth.check()){
       return response.json({
         message: 'Unknown user or missing token'
@@ -19,8 +20,8 @@ class FindUser {
 
     const user = await  auth.getUser();
 
-    request.body.user = user;
-
+    //console.log(user);
+    ctx.request.user = user;
     await next()
   }
 }

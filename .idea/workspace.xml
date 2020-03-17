@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/Http/MovieController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/MovieController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/Http/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/UserController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Middleware/FindUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/FindUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
       <workItem from="1583792878612" duration="742000" />
       <workItem from="1583943394027" duration="266000" />
       <workItem from="1583945830317" duration="7210000" />
-      <workItem from="1584463602328" duration="1752000" />
+      <workItem from="1584463602328" duration="5481000" />
     </task>
     <servers />
   </component>
