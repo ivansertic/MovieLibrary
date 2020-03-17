@@ -19,8 +19,8 @@ const Route = use('Route');
 Route.post('/register', 'AuthController.register');
 Route.post('/login', 'AuthController.login');
 
-Route.patch('/user', 'UserController.update').middleware('auth').middleware('findUser');
-Route.delete('/user', 'UserController.delete').middleware('auth').middleware('findUser');
-Route.get('/user', 'UserController.show').middleware('auth').middleware('findUser');
+Route.patch('/user', 'UserController.update').middleware(['auth','findUser']);
+Route.delete('/user', 'UserController.delete').middleware(['auth','findUser']);
+Route.get('/user', 'UserController.show').middleware(['auth','findUser']);
 
-Route.post('/movies','MovieController.store').middleware('auth').middleware('findAdmin');
+Route.post('/movies','MovieController.store').middleware(['auth','findAdmin']);
