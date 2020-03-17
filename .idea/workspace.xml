@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eae241c5-4178-4941-b701-3a1a2b6cc9ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cors.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/cors.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +39,7 @@
       <workItem from="1583792878612" duration="742000" />
       <workItem from="1583943394027" duration="266000" />
       <workItem from="1583945830317" duration="7210000" />
-      <workItem from="1584463602328" duration="155000" />
+      <workItem from="1584463602328" duration="227000" />
     </task>
     <servers />
   </component>
