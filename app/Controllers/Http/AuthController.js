@@ -10,7 +10,7 @@ class AuthController {
 
     const accessToken = await auth.generate(user,true)
 
-    return response.json({
+    return response.json.status(201)({
       "user":user,
       "access_token": accessToken
     })
@@ -20,16 +20,16 @@ class AuthController {
     const {email, password} = request.post()
 
     try{
-      if(await auth.attempt(email,password)){
-        const user = await User.findBy('email',email)
-        const accessToken = await auth.generate(user,true)
-        return response.json({
+
+        const user = await User.findBy('email',email);
+        const accessToken = await auth.generate(user,true);
+        return response.json.status(200)({
           "user": user,
           "access_token": accessToken
         })
-      }
+
     } catch(e){
-      return response.json({
+      return response.json.status(400)({
         message:"Unknown email or password"
       })
     }

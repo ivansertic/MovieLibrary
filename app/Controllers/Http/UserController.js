@@ -23,7 +23,7 @@ class UserController {
 
     await user.save();
 
-    return response.json({
+    return response.json.status(200)({
       message: 'Successfully update your info'
     });
 
@@ -35,7 +35,7 @@ class UserController {
 
     await user.delete();
 
-    return response.json({
+    return response.json.status(200)({
       message: 'Sorry to se you go'
     });
   }

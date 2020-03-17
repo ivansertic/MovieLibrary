@@ -38,7 +38,7 @@ class MovieController {
     const {title,genre,description,length_in_minutes} = request.post();
 
         const movie = await Movie.create({title,genre,description,length_in_minutes})
-        return response.json({
+        return response.json.status(201)({
           "movie": movie
         })
 
