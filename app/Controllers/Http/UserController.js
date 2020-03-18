@@ -6,11 +6,7 @@ class UserController {
   async show({request,response}){
 
     const user = request.user;
-    response.json({
-      message: "Here is your data",
-      "email": user.email,
-      "User type": user.type
-    })
+    response.userData(user.email, user.type, "Here is your data");
   }
 
   async update({request,response}){
