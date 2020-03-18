@@ -20,9 +20,12 @@ class AuthController {
     const {email, password} = request.post();
 
     try{
-
         const user = await User.findBy('email',email);
-        const accessToken = await auth.generate(user,true);
+
+        let payloadType = {type: user.type};
+        const accessToken = await auth.attempt(email,password, payloadType);
+
+
         return response.status(200).json({
           "user": user,
           "access_token": accessToken

@@ -12,17 +12,12 @@ class FindAdmin {
   async handle ({ request, response, auth }, next) {
     // call next to advance the request
 
-    if(!await auth.check()){
-      return response.json({
-        message: 'Unknown user or missing token'
-      })
-    }
-
-    const user = await  auth.getUser();
 
 
-    if(user.type != 'admin'){
-      return response.json({
+    await auth.check();
+
+    if(auth.jwtPayload.data.type != 'admin'){
+      return response.status(403).json({
         message: 'You are not authorized!!!'
       })
     }

@@ -12,11 +12,6 @@ class FindUser {
   async handle (ctx, next) {
     // call next to advance the request
     const {request, response,auth} = ctx;
-    if(!await auth.check()){
-      return response.json({
-        message: 'Unknown user or missing token'
-      })
-    }
 
     const user = await  auth.getUser();
 
