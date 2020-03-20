@@ -22,5 +22,9 @@ Route.post('/login', 'AuthController.login');
 Route.patch('/user', 'UserController.update').middleware(['auth','findUser']);
 Route.delete('/user', 'UserController.delete').middleware(['auth','findUser']);
 Route.get('/user', 'UserController.show').middleware(['auth','findUser']);
+Route.get('/user/index','UserController.index').middleware(['auth','findUser']);
+Route.get('user/myMovies','MovieController.showUserMovies').middleware(['auth','findUser']);
+Route.patch('/user/index', 'UserController.addMovie').middleware(['auth','findUser']);
+
 
 Route.post('/movies','MovieController.store').middleware(['auth','findAdmin']);

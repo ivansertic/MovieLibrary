@@ -9,7 +9,7 @@
  */
 
 
-const Movie = use('App/Models/Movie')
+const Movie = use('App/Models/Movie');
 
 class MovieController {
   /**
@@ -77,6 +77,20 @@ class MovieController {
    * @param {Response} ctx.response
    */
   async destroy ({ params, request, response }) {
+  }
+
+  async showUserMovies({request, response}){
+
+    const user = request.user;
+    console.log(user.id);
+    const movies = await Movie.query().whereHas('users',
+      usersQuery =>{
+          usersQuery.wherePivot('user_id', user.id)
+      }).fetch();
+
+    response.status(200).json({
+      data: movies
+    })
   }
 }
 

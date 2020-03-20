@@ -1,5 +1,6 @@
 'use strict'
 
+const Database = use ('Database');
 
 class UserController {
 
@@ -11,7 +12,7 @@ class UserController {
 
   async update({request,response}){
 
-    const {email,password} = await request.post();
+    const {email,password, movies} = await request.post();
 
 
     request.user.email = email;
@@ -35,6 +36,26 @@ class UserController {
       message: 'Sorry to se you go'
     });
   }
+
+  async index ({response, request}){
+    return await Database
+      .select('*')
+      .from('movies');
+  }
+
+  async addMovie({request}){
+    const user = request.user;
+
+    const {movies} = request.post();
+
+    if(movies && movies.length > 0){
+      await user.movies().detach();
+      await user.movies().attach(movies);
+    }
+  }
+
 }
+
+
 
 module.exports = UserController;
