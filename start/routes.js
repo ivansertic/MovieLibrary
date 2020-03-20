@@ -28,3 +28,6 @@ Route.patch('/user/index', 'UserController.addMovie').middleware(['auth','findUs
 
 
 Route.post('/movies','MovieController.store').middleware(['auth','findAdmin']);
+Route.patch('/movies/:id', 'MovieController.update').middleware(['auth', 'findAdmin']);
+Route.get('/movies/:id', 'MovieController.show').middleware(['auth','findAdmin']);
+Route.delete('/movies/:id','MovieController.destroy').middleware(['auth','findAdmin']);

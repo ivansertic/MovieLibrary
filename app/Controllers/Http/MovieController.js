@@ -10,6 +10,7 @@
 
 
 const Movie = use('App/Models/Movie');
+const Database = use ('Database');
 
 class MovieController {
   /**
@@ -54,9 +55,10 @@ class MovieController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
-  }
+  async show ({ params:{id}, request, response, view }) {
+    return await Database.select().from('movies').where('id', id);
 
+  }
   /**
    * Update movie details.
    * PUT or PATCH movies/:id
@@ -65,7 +67,11 @@ class MovieController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
+  async update ({ params:{id}, request, response }){
+    const {title, genre, description, length_in_minutes} =await request.post();
+
+    await Database.table('movies').where('id',id)
+      .update({title:title,genre:genre,description:description,length_in_minutes:length_in_minutes});
   }
 
   /**
@@ -76,7 +82,8 @@ class MovieController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {
+  async destroy ({ params:{id}, request, response }) {
+    await Database.table('movies').where('id',id).delete();
   }
 
   async showUserMovies({request, response}){

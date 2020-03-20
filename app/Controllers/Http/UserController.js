@@ -12,7 +12,7 @@ class UserController {
 
   async update({request,response}){
 
-    const {email,password, movies} = await request.post();
+    const {email,password} = await request.post();
 
 
     request.user.email = email;
