@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="eae241c5-4178-4941-b701-3a1a2b6cc9ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/AuthController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/MovieController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/MovieController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Http/UserController.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Http/UserController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Middleware/FindAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/FindAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/start/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
       <workItem from="1584730859063" duration="5195000" />
       <workItem from="1584745046914" duration="3166000" />
       <workItem from="1585570752149" duration="53000" />
-      <workItem from="1588689209983" duration="2521000" />
+      <workItem from="1588689209983" duration="4417000" />
     </task>
     <servers />
   </component>

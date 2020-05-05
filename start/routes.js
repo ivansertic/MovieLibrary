@@ -16,8 +16,8 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route');
 
-Route.post('/register', 'AuthController.register');
-Route.post('/login', 'AuthController.login');
+Route.post('/register', 'AuthController.register').validator('RegisterUser');
+Route.post('/login', 'AuthController.login').validator('LoginUser');
 
 Route.patch('/user', 'UserController.update').middleware(['auth','findUser']);
 Route.delete('/user', 'UserController.delete').middleware(['auth','findUser']);
