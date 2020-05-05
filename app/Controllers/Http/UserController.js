@@ -1,6 +1,7 @@
 'use strict'
 
 const Database = use ('Database');
+const User = use('App/Models/User');
 
 class UserController {
 
@@ -45,13 +46,8 @@ class UserController {
 
   async addMovie({request}){
     const user = request.user;
-
     const {movies} = request.post();
-
-    if(movies && movies.length > 0){
-      await user.movies().detach();
-      await user.movies().attach(movies);
-    }
+    User.syncMovies(user,movies);
   }
 
 }
