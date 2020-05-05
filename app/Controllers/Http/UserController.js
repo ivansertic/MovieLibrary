@@ -20,7 +20,7 @@ class UserController {
 
     await request.user.save();
 
-    return response.status(200).json({
+    return response.ok({
       message: 'Successfully update your info'
     });
 
@@ -32,7 +32,7 @@ class UserController {
 
     await user.delete();
 
-    return response.status(200).json({
+    return response.found({
       message: 'Sorry to se you go'
     });
   }

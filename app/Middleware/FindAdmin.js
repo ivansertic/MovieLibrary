@@ -17,7 +17,7 @@ class FindAdmin {
     await auth.check();
 
     if(auth.jwtPayload.data.type != 'admin'){
-      return response.status(403).json({
+      return response.unauthorized({
         message: 'You are not authorized!!!'
       })
     }

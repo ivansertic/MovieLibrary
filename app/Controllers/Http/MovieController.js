@@ -39,7 +39,7 @@ class MovieController {
     const {title,genre,description,length_in_minutes} = request.post();
 
         const movie = await Movie.create({title,genre,description,length_in_minutes})
-        return response.status(201).json({
+        return response.created({
           "movie": movie
         })
 
@@ -95,7 +95,7 @@ class MovieController {
           usersQuery.wherePivot('user_id', user.id)
       }).fetch();
 
-    response.status(200).json({
+    response.ok({
       data: movies
     })
   }

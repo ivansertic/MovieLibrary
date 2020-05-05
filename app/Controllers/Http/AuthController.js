@@ -3,17 +3,20 @@
 const User = use('App/Models/User');
 
 class AuthController {
-  async register({request,auth,response}){
+  async register({request,auth,response}) {
     const {email, password, type} = request.post();
 
-    const user = await User.create({email,password,type});
+    const user = await User.create({email, password, type});
 
-    const accessToken = await auth.generate(user,true);
+    const accessToken = await auth.generate(user, true);
 
-    return response.status(201).json({
-      "user":user,
-      "access_token": accessToken
-    })
+
+
+    return response.created({
+      "email": user.email,
+      "type": user.type,
+      "token": accessToken
+    });
   }
 
   async login({request, auth, response}){
@@ -26,13 +29,13 @@ class AuthController {
         const accessToken = await auth.attempt(email,password, payloadType);
 
 
-        return response.status(200).json({
+        return response.ok({
           "user": user,
           "access_token": accessToken
-        })
+        });
 
     } catch(e){
-      return response.status(400).json({
+      return response.notFound({
         message:"Unknown email or password"
       })
     }
